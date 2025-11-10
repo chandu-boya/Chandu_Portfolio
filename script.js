@@ -1,7 +1,7 @@
 
 // Initialize EmailJS
 (function() {
-    emailjs.init("J7rko9dQEJk9mUDB7");
+    emailjs.init("AtCoNILbR-bDL2wno");
 })();
 
 // DOM Elements
