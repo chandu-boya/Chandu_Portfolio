@@ -256,8 +256,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Console welcome message
 console.log(`
-🚀 Welcome to Boya Chandu's Portfolio!
-📧 Contact: bchanduu2003@gmail.com
-🔗 LinkedIn: linkedin.com/in/boya-chandu-a30649271
-💻 Built with HTML, CSS, and JavaScript
+    If you want to collaborate, reach out to me at Contact section!
+    Just fill the form and I'll get back to you ASAP :)
 `);
