@@ -82,7 +82,7 @@ function initializeContactForm() {
             submitBtn.disabled = true;
             
             // Send email using EmailJS
-            emailjs.send('service_gsvys8y', 'template_9hrz0nn', {
+            emailjs.send('service_gsvys8y', 'template_c5gbs2d', {
                 from_name: name,
                 from_email: email,
                 message: message,
@@ -208,6 +208,32 @@ document.addEventListener('DOMContentLoaded', () => {
             observer.observe(el);
         });
     }, 100);
+
+    // Add scroll behavior for certifications arrows after content loads
+    setTimeout(() => {
+        const scroller = document.querySelector('#certifications .certifications-main-grid');
+        const leftBtn = document.querySelector('#certifications .cert-scroll-btn.left');
+        const rightBtn = document.querySelector('#certifications .cert-scroll-btn.right');
+        if (scroller && leftBtn && rightBtn) {
+            const scrollAmount = 440; // approximately one card width
+            leftBtn.addEventListener('click', () => {
+                scroller.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            });
+            rightBtn.addEventListener('click', () => {
+                scroller.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            });
+
+            // Show/hide buttons based on scroll position
+            const updateButtons = () => {
+                const maxScrollLeft = scroller.scrollWidth - scroller.clientWidth - 1;
+                leftBtn.style.display = scroller.scrollLeft > 0 ? 'flex' : 'none';
+                rightBtn.style.display = scroller.scrollLeft < maxScrollLeft ? 'flex' : 'none';
+            };
+            scroller.addEventListener('scroll', updateButtons);
+            window.addEventListener('resize', updateButtons);
+            updateButtons();
+        }
+    }, 300);
     
     // Typing animation for hero title
     const heroTitle = document.querySelector('.hero-title');
@@ -230,6 +256,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Console welcome message
 console.log(`
-    If you want to collaborate, reach out to me at contact page!
-    Just fill the form and I'll get back to you ASAP.
+🚀 Welcome to Boya Chandu's Portfolio!
+📧 Contact: bchanduu2003@gmail.com
+🔗 LinkedIn: linkedin.com/in/boya-chandu-a30649271
+💻 Built with HTML, CSS, and JavaScript
 `);

@@ -31,7 +31,6 @@ portfolio_website/
 ├── script.js               # JavaScript functionality
 ├── assets/                 # Static assets
 │   ├── profile.jpg         # Profile photo
-│   ├── Certificates/       # Certificate PDFs
 │   └── Logos/              # Company logos
 ├── sections/               # Individual section files
 │   ├── about.html          # About section
